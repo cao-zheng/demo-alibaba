@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: demo-order
+  cloud:
+    nacos:
+      serverAddr: 127.0.0.1:8848
+  config:
+    import:
+      - optional:nacos:${spring.application.name}.yaml
+server:
+  port: 8081
