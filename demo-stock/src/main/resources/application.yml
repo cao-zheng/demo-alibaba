@@ -22,6 +22,6 @@ seata:
   tx-service-group: ${spring.application.name}-group
   service:
     vgroup-mapping:
-      stock-server-group: default
+      demo-stock.group: default
     grouplist:
       default: 127.0.0.1:7091
