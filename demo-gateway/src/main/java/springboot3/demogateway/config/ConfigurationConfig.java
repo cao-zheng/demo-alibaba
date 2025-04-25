@@ -1,4 +1,4 @@
-package springboot3.demoorder.config;
+package springboot3.demogateway.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

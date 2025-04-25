@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: demo-gateway
+  config:
+    import:
+      - optional:nacos:${spring.application.name}.yaml
+  cloud:
+    gateway:
+      routes:
+        - id: demo-stock
+          uri: lb://demo-stock
+          predicates:
+            - Path=/stock/**
+        - id: demo-order
+          uri: lb://demo-order
+          predicates:
+            - Path=/order/**
+server:
+  port: 8085

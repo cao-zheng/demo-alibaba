@@ -1,5 +1,6 @@
-package springboot3.demoorder.cofig;
+package springboot3.demoorder.config;
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -7,6 +8,7 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class ConfigurationConfig {
     @Bean
+    @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
