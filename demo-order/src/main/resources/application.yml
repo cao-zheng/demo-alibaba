@@ -13,6 +13,9 @@ spring:
     loadbalancer:
       nacos:
         enabled: true
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8880
   config:
     import:
       - optional:nacos:${spring.application.name}.yaml

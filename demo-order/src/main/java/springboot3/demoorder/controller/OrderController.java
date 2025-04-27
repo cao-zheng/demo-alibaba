@@ -50,4 +50,10 @@ public class OrderController {
         ordernum.decrementAndGet();
         return author + "hello word" + msg;
     }
+
+    @GetMapping("/sentinelTest")
+    public String sentinelTest() throws Exception{
+        Thread.sleep(2000);
+        return author + "hello word";
+    }
 }
